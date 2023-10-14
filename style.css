@@ -227,7 +227,7 @@ section h1{
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .cards{
@@ -314,7 +314,7 @@ footer h3:hover{
 }
 
 .mainMenu li {
-    margin-top: 10px ;
+    margin-top: 1px ;
     list-style: none;
     font-size: 12px;
 }
@@ -359,7 +359,9 @@ footer h3:hover{
 
 
 /* MEDIA QUERY.... */
-@media only screen and (max-width: 600px) {
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
     .left h4{
         font-size: 10px;
     }
@@ -392,59 +394,72 @@ footer h3:hover{
     }
     
     .section2{
-        padding: 0 40px;
         display: block;
+        padding: 0 20px;
     }
 
     .section3{
-        padding: 0 40px;
         display: block;
+        padding: 0 20px;
     }
 
     .card-container{
         display: block;
-        /* gap: 30px; */
     }
 
     .cards{
-        width: 250px;
-        margin: 10px 40px;
+        margin-top: 15px;
     }
 
-    
-    
     .brands{
-        padding: 0 30px;
-        display: block;
-        grid-template-columns:  1fr;
-        gap: 40px;
+        gap: 25px;
     }
 
     .brands img{
-        gap: 20px;
+        width: 28px;
     }
-
-    .textArea h3{
-        margin-top: 40px;
-    }
-
+    
     .textArea{
         display: block;
-        /* grid-template-columns: 2fr 2fr; */
+    }
+    
+    .quickLinks{
+        margin-top: 15px;
     }
 
     .aboutUs p{
-        font-size: 12px;
+        font-size: 10px;
     }
 
-    .span{
-        font-size: 10px;
+    .socialIcons{
+        margin: 10px 0;
+    }
+
+    .mainMenu{
+        margin-top: 15px;
+    }
+
+    .contactUs{
+        margin-top: 15px;
+    }
+    
+
+    footer{
+        padding: 30px 25px;
     }
 }
 
 
+    
+@media all and (min-width: 768px) and (max-width: 980px) {
+    .left h4{
+        font-size: 10px;
+    }
 
-@media (min-width: 600px) and (max-width: 768px) {
+    .left p{
+        font-size: 22px;
+    }
+
     nav{
         display: flex;
     }
@@ -461,52 +476,75 @@ footer h3:hover{
 
     .hero-section{
         display: block;
+    }
+    
+    .hero-section .right img{
         margin-top: 20px;
+        width: 60%;
+        float: left;
     }
 
     .section2{
         display: grid;
         grid-template-columns: 2fr 2fr;
-        margin: 0 45px;
+        padding: 0 50px;
     }
 
     .section3{
         display: grid;
         grid-template-columns: 2fr 2fr;
-        margin: 0 45px;
-    }
-
-    .right{
-        display: block;
+        padding: 0 60px;
     }
 
     .card-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
+        display: block;
+        padding: 0 50px;
     }
 
     .cards{
-        width: 200px;
-    }
-
-    .brands img{
-       width: 40px;
-    }
-
-    .contactUs li{
-        font-size: 10px;
+        margin-top: 15px;
     }
 
     .textArea{
-        display: grid;
-        grid-template-columns: 4fr 2fr;
-        margin: 0 30px;
+        gap: 30px;
     }
 
-    .span{
-        margin-top: 40px;
-        text-align: center;
+    .quickLinks{
+        margin-top: 15px;
     }
+
+    .quickLinks li{
+        font-weight: 300;
+    }
+
+    .aboutUs p{
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .socialIcons{
+        margin: 10px 0;
+    }
+
+    .mainMenu{
+        margin-top: 15px;
+    }
+
+    .mainMenu li{
+        font-weight: 300;
+    }
+
+    .contactUs{
+        margin-top: 15px;
+    }
+    
+    .contactUs li{
+        font-weight: 300;
+    }
+
+    footer{
+        padding: 30px 25px;
+    }
+
+
 }
-
