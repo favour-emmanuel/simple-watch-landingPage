@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .section-1{
     color: white;
     padding: 20px 30px;
-    /* background-color: #f08; */
-    background: radial-gradient(circle, #fabfcc, #f08);
+    background-color: #faa;
+    /* background: radial-gradient(circle, #fabfcc, #f08); */
 }
 
 nav{
@@ -20,8 +20,9 @@ nav{
     align-items: center;
 }
 
-nav h3{
-    font-weight: 600;
+nav .logo{
+    font-weight: 700;
+    font-size: 16px;
 }
 
 nav a{
@@ -36,29 +37,52 @@ nav a:hover{
 ul{
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-}
-
- li{
+    gap: 20px;
     list-style: none;
 }
 
 li a{
     text-decoration: none;
     color: #000000;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 li a:hover{
     color: white;
+    border-bottom: 2px solid #000000;
 }
 
 .hero-section{
     display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 .hamburgerMenu{
     display: none;
 }
+
+.change .bar1{
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
 .left h4{
     color: #000000;
     font-size: 15px;
@@ -71,22 +95,28 @@ li a:hover{
     padding: 15px 35px;
     border: none;
     border-radius: 25px;
-    background-color: black;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .left button:hover{
-    background-color: whitesmoke;
-    color: #f08;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
     cursor: pointer;
+    transition: 1s;
 }
 
 .left p{
     font-size: 22px;
     margin-top: 18px;
-    font-size: 16px;
+    font-size: 38px;
     color: #000000;
-    font-weight: 400;    
+    font-weight: 700;    
+}
+
+.left span{
+    color: #ffffff;
 }
 
 .section-1 .right img{
@@ -98,15 +128,97 @@ li a:hover{
     justify-content: flex-end;
 }
 
+.section2{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.gridContainer{
+    margin-top: 50px;
+    position: relative;
+}
+
+.gridContainer:hover{
+    transform: scale(1.05);
+}
+
+.box{
+    width: 280px;
+    height: 300px;
+    padding: 0 15px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.box img{
+    width: 100%;
+}
+
+.imgDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stock-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #04b34a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 0 10px;
+}
+
+
+.gridContainer h3{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.gridContainer .stars .fas{
+    color: #faa;
+}
+
+.gridContainer h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.gridContainer h4 sup{
+    font-weight: 300;
+}
+
+.section3{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+h1{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: #faa underline;
+    font-size: 24px;
+}
+
 section{
     background-color: rgb(255, 255, 255);
 }
 
 section h1{
-    margin-top: 20px;
+    margin-top: 70px;
     text-align: center;
     font-weight: 700;
-    text-decoration: #f08 underline;
+    text-decoration: #faa underline;
 }
 
 .card-container{
@@ -115,11 +227,12 @@ section h1{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin-top: 20px;
 }
 
 .cards{
     padding: 10px;
-    background-color: #c8d4d4;
+    background-color: #efefee;
     border-radius: 10px;
 }
 
@@ -131,7 +244,7 @@ section h1{
 }
 
 .cards h3{
-    color: #f08;
+    color: #faa;
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
@@ -151,7 +264,7 @@ section h1{
     margin: 60px 0;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .brands img{
@@ -165,16 +278,22 @@ footer{
 }
 
 .textArea{
-    gap: 60px;
+    gap: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 footer h3{
     font-size: 14px;
     font-weight: 500;
     text-decoration: underline;
-    color: #f08;
+    color: #faa;
+}
+
+footer h3:hover{
+    cursor: pointer;
+    color: white;
 }
 
 .aboutUs p{
@@ -184,10 +303,25 @@ footer h3{
     font-size: 12px;
 }
 
+.aboutUs .fab{
+    margin: 10px 5px 0 5px;
+    color: #faa;
+}
+
+.aboutUs .fab:hover{
+    color: white;
+    cursor: pointer;
+}
+
 .mainMenu li {
     margin-top: 10px ;
     list-style: none;
     font-size: 12px;
+}
+
+.mainMenu li:hover{
+    cursor: pointer;
+    color: #faa;
 }
 
 .quickLinks li{
@@ -196,10 +330,20 @@ footer h3{
     font-size: 12px;
 }
 
+.quickLinks li:hover{
+    cursor: pointer;
+    color: #faa;
+}
+
 .contactUs li{
     margin-top: 10px;
     list-style-type: none;
     font-size: 12px;
+}
+
+.contactUs li:hover{
+    cursor: pointer;
+    color: #faa;
 }
 
 .span{
@@ -215,7 +359,15 @@ footer h3{
 
 
 /* MEDIA QUERY.... */
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+    .left h4{
+        font-size: 10px;
+    }
+
+    .left p{
+        font-size: 22px;
+    }
+
     nav{
         display: flex;
     }
@@ -235,18 +387,54 @@ footer h3{
     }
     
     .hero-section .right img{
+        margin-top: 20px;
         width: 80%;
     }
     
-    .card-container{
-        display: grid;
+    .section2{
+        padding: 0 40px;
+        display: block;
     }
+
+    .section3{
+        padding: 0 40px;
+        display: block;
+    }
+
+    .card-container{
+        display: block;
+        /* gap: 30px; */
+    }
+
+    .cards{
+        width: 250px;
+        margin: 10px 40px;
+    }
+
+    
     
     .brands{
-        margin: 20px 30px;
+        padding: 0 30px;
         display: block;
         grid-template-columns:  1fr;
+        gap: 40px;
+    }
+
+    .brands img{
         gap: 20px;
+    }
+
+    .textArea h3{
+        margin-top: 40px;
+    }
+
+    .textArea{
+        display: block;
+        /* grid-template-columns: 2fr 2fr; */
+    }
+
+    .aboutUs p{
+        font-size: 12px;
     }
 
     .span{
@@ -256,43 +444,69 @@ footer h3{
 
 
 
-@media screen and (max-width: 768px) {
-    .section-1{
+@media (min-width: 600px) and (max-width: 768px) {
+    nav{
+        display: flex;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .hamburgerMenu{
         display: block;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hero-section{
+        display: block;
+        margin-top: 20px;
+    }
+
+    .section2{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        margin: 0 45px;
+    }
+
+    .section3{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        margin: 0 45px;
     }
 
     .right{
-        margin-top: 20px;
         display: block;
     }
 
     .card-container{
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
     }
 
-    .brands{
-        display: grid;
-        grid-template-columns: 2fr 2fr 1fr;
-        margin: 20px 30px;
+    .cards{
+        width: 200px;
+    }
+
+    .brands img{
+       width: 40px;
+    }
+
+    .contactUs li{
+        font-size: 10px;
     }
 
     .textArea{
         display: grid;
-        justify-content: center;
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 4fr 2fr;
         margin: 0 30px;
     }
 
     .span{
-        margin-top: 30px;
-        margin-left: 20px;
-        text-align: start;
+        margin-top: 40px;
+        text-align: center;
     }
 }
 
-
-
-@media screen and (max-width: 480px) {
-
-
-}
