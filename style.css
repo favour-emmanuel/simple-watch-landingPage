@@ -53,11 +53,11 @@ a{
     text-decoration: none;
 }
 
-.card__body .stock__label{
+.stock__label{
     position: absolute;
     top: 0;
     right: 0;
-    background-color: var(--cyan);
+    background-color: var(--gold);
     color: white;
     padding: 5px 10px;
     border-radius: 0 0 0 10px;
@@ -85,6 +85,10 @@ li a{
 .nav__brand{
     font-weight: 700;
     color: var(--blacq);
+}
+
+.nav__brand:hover, li a:hover{
+    color: var(--cyan);
 }
 
 
@@ -126,6 +130,13 @@ section{
     padding: 10px;
     background-color: var(--cyan);
     color: var(--white);
+}
+
+.hero__content button:hover, .hero__content2 button:hover{
+    color: var(--cyan);
+    background-color: transparent;
+    border: 1px solid var(--cyan);
+    transition: 0.2s;
 }
 
 
@@ -181,6 +192,7 @@ section{
 .card__body:hover{
     transform: scale(1.05);
     cursor: pointer;
+    transition: 0.4s all;
 }
 
 .card__body{
@@ -190,7 +202,7 @@ section{
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--white);
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .card__img{
@@ -244,7 +256,7 @@ section{
 .customer_Reviews{
     padding: 10px 15px;
     width: 330px;
-    height: 300px;
+    height: auto;
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--palewhite);
@@ -266,6 +278,7 @@ section{
 .customer_Reviews p{
     margin: 1rem 0;
     font-size: 14px;
+    line-height: 1.3rem;
 }
 
 .customer_Reviews h4{
